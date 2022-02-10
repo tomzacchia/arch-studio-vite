@@ -1,0 +1,54 @@
+@import "../colors";
+
+.pointer {
+  cursor: pointer;
+}
+
+.button {
+  padding: 12px 2rem;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  background-color: $very-dark-blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #979797;
+  }
+}
+
+.button p {
+  font-weight: 800;
+}
+
+.button i {
+  margin-left: 1rem;
+}
+
+.square-button {
+  height: 80px;
+  width: 80px;
+  border: 0;
+  padding: 0;
+  color: $medium-grey;
+  background-color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $very-light-grey;
+    color: $medium-grey;
+  }
+}
+
+.square-button-very-dark-blue {
+  @extend .square-button;
+  background-color: $very-dark-blue;
+  color: white;
+
+  &:hover {
+    background-color: $very-dark-blue;
+    color: white;
+  }
+}

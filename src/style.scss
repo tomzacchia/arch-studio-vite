@@ -1,0 +1,24 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+@import "./styles/typography";
+@import "./styles/colors";
+@import "./styles/mixins";
+
+// COMPONENTS  ===========================
+@import "./styles/components/buttons";
+@import "./styles/components/container";
+@import "./styles/components/navbar";
+@import "./styles/components/breadcrumbs";
+
+// VIEWS  ===========================
+@import "./styles/views/index";

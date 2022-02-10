@@ -1,0 +1,31 @@
+@import "../colors";
+@import "../mixins";
+
+.breadcrumb {
+  display: none;
+}
+
+@include tablet {
+  .breadcrumb {
+    display: initial;
+    position: fixed;
+    z-index: 200;
+    top: 79px;
+    left: -1.5rem;
+    display: flex;
+    align-items: center;
+    transform: rotate(90deg);
+  }
+
+  .breadcrumb-line {
+    margin-right: 1rem;
+    width: 4rem;
+    height: 1px;
+    background-color: $light-grey;
+  }
+
+  .breadcrumb-text {
+    color: $light-grey;
+    letter-spacing: 12px;
+  }
+}

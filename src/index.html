@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Arch Studio</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/349cf0313a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="breadcrumb">
+      <div class="breadcrumb-line"></div>
+      <p class="breadcrumb-text"> HOME </p>
+    </section>
+
+    <nav class="container nav">
+      <p class="nav-title pointer"> Arch </p>
+      <ul class="menu">
+        <li class="menu-item"> Portfolio </li>
+        <li class="menu-item"> About Us </li>
+        <li class="menu-item"> Contact </li>
+      </ul>
+      <div class="dark-overlay"></div>
+      <div class="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <section class="primary-hero hero">
+      <div class="hero-dark-overlay"></div>
+      <div class="hero-content">
+        <h1 class="h1-bold white-text"> Project Paramour</h1>
+        <p class="hero-description">
+          Project made for an art museum near Southwest London. Project Paramour
+          is a statement of bold, modern architecture.
+        </p>
+        <button class="button">
+          <p>See Our Portfolio</p>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="hero-pagination">
+        <button
+          class="square-button square-button-very-dark-blue"
+          data-index="01"
+          >01</button
+        >
+        <button class="square-button" data-index="02">02</button>
+        <button class="square-button" data-index="03">03</button>
+        <button class="square-button" data-index="04">04</button>
+      </div>
+    </section>
+
+    <section class="container welcome">
+      <h1 class="h1-large welcome-large-text"> Welcome </h1>
+      <div class="welcome-content">
+        <div class="welcome-content-left">
+          <h2> Welcome to Arch Studio </h2>
+          <p>
+            We have a unique network and skillset to help bring your projects to
+            life. Our small team of highly skilled individuals combined with our
+            large network put us in a strong position to deliver exceptional
+            results.
+          </p>
+          <p>
+            Over the past 10 years, we have worked on all kinds of projects.
+            From stations to high-rise buildings, we create spaces that inspire
+            and delight.
+          </p>
+          <p>
+            We work closely with our clients so that we understand the
+            intricacies of each project. This allows us to work in harmony the
+            surrounding area to create truly stunning projects that will stand
+            the test of time.
+          </p>
+        </div>
+        <div class="welcome-content-right"></div>
+      </div>
+    </section>
+
+    <section class="secondary-hero hero">
+      <div class="hero-dark-overlay"></div>
+      <div class="hero-content">
+        <h1 class="h1-bold white-text"> Small team, big ideas </h1>
+        <button class="button">
+          <p>About Us</p>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+  </body>
+
+  <section class="container featured">
+    <div class="featured-header">
+      <h2 class="h2"> Featured </h2>
+      <button class="button">
+        <p>Sell All</p>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div class="featured-cards-container">
+      <div class="featured-card featured-1">
+        <h1 class="h1-large"> 1 </h1>
+        <div class="linear-overlay"></div>
+        <div class="featured-card-text">
+          <h3 class="h3"> Project Del Sol </h3>
+          <p class="pointer"> View All Projects </p>
+        </div>
+      </div>
+      <div class="featured-card featured-2">
+        <h1 class="h1-large"> 2 </h1>
+        <div class="linear-overlay"></div>
+        <div class="featured-card-text">
+          <h3 class="h3"> 228B Tower </h3>
+          <p class="pointer"> View All Projects </p>
+        </div>
+      </div>
+      <div class="featured-card featured-3">
+        <h1 class="h1-large"> 3 </h1>
+        <div class="linear-overlay"></div>
+        <div class="featured-card-text">
+          <h3 class="h3"> Le Prototype </h3>
+          <p class="pointer"> View All Projects </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    var is_bars = true;
+    const hamburver = document.querySelector(".hamburger");
+    const darkOverlayNode = document.querySelector(".dark-overlay");
+    const menuItemsContainer = document.querySelector(".menu");
+    const MENU_ANIMATION_CLASSNAME = "animate-menu";
+
+    hamburver.addEventListener("click", () => {
+      if (is_bars) {
+        hamburver.innerHTML = `<i class="fas fa-times"></i>`;
+      } else {
+        hamburver.innerHTML = `<i class="fas fa-bars"></i>`;
+      }
+
+      animationMenu();
+      is_bars = !is_bars;
+    });
+
+    function animationMenu() {
+      darkOverlayNode.classList.toggle("animate-overlay");
+      menuItemsContainer.classList.toggle(MENU_ANIMATION_CLASSNAME);
+    }
+
+    window.addEventListener("resize", () => {
+      const TABLET_SIZE = 768;
+
+      if (document.documentElement.clientWidth >= TABLET_SIZE && !is_bars) {
+        removeMenuAnimateClassIfExists();
+      }
+    });
+
+    function removeMenuAnimateClassIfExists() {
+      // menu-active, resize >= tablet, hide menu
+      if (menuItemsContainer.classList.contains(MENU_ANIMATION_CLASSNAME)) {
+        menuItemsContainer.classList.toggle(MENU_ANIMATION_CLASSNAME);
+        return;
+      }
+    }
+  </script>
+  <script type="module" src="/main.js"></script>
+</html>
