@@ -1,19 +1,20 @@
 import "./style.scss";
 
 var is_bars = true;
-const hamburver = document.querySelector(".hamburger");
+const hamburger = document.querySelector(".hamburger");
 const darkOverlayNode = document.querySelector(".dark-overlay");
 const menuItemsContainer = document.querySelector(".menu");
 const MENU_ANIMATION_CLASSNAME = "animate-menu";
 
-hamburver.addEventListener("click", () => {
+hamburger.addEventListener("click", () => {
   if (is_bars) {
-    hamburver.innerHTML = `<i class="fas fa-times"></i>`;
+    hamburger.innerHTML = `<i class="fas fa-times"></i>`;
   } else {
-    hamburver.innerHTML = `<i class="fas fa-bars"></i>`;
+    hamburger.innerHTML = `<i class="fas fa-bars"></i>`;
   }
 
   animationMenu();
+
   is_bars = !is_bars;
 });
 
