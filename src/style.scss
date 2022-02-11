@@ -25,5 +25,9 @@ a {
 @import "./styles/components/footer";
 @import "./styles/components/breadcrumbs";
 
+.anchor-padding-top-bottom {
+  padding: 12px 0;
+}
+
 // VIEWS  ===========================
 @import "./styles/views/index";

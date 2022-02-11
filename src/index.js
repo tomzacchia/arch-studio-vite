@@ -27,7 +27,7 @@ function getFeaturedCardHTML() {
           <div class="featured-card-text">
             <h3 class="h3"> ${config.title} </h3>
             <p class="pointer">
-              <a href="index.html" style="color: inherit">View All Projects </a>
+              <a class="anchor-padding-top-bottom" href="index.html" style="color: inherit">View All Projects </a>
             </p>
           </div>
         </div>
