@@ -1,12 +1,21 @@
 import "./main.scss";
+import { footerInnerHTML, navBarInnerHTML } from "./markups";
 
+// NAVBAR & FOOTER ========================================
+const navContainer = document.querySelector(".nav");
+const footerContainer = document.querySelector(".footer");
+
+navContainer.innerHTML = navBarInnerHTML;
+footerContainer.innerHTML = footerInnerHTML;
+
+// MENU ANIMATION ========================================
 var is_bars = true;
 const hamburger = document.querySelector(".hamburger");
 const darkOverlayNode = document.querySelector(".dark-overlay");
 const menuItemsContainer = document.querySelector(".menu");
 const MENU_ANIMATION_CLASSNAME = "animate-menu";
 
-hamburger.addEventListener("click", () => {
+navContainer.addEventListener("click", (event) => {
   if (is_bars) {
     hamburger.innerHTML = `<i class="fas fa-times"></i>`;
   } else {
