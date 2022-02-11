@@ -1,3 +1,5 @@
+import "./styles/index.scss";
+
 const featuredCardContainer = document.querySelector(
   ".featured-cards-container"
 );

@@ -1,4 +1,4 @@
-import "./style.scss";
+import "./main.scss";
 
 var is_bars = true;
 const hamburger = document.querySelector(".hamburger");
