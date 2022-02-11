@@ -1,11 +1,6 @@
 @import "../mixins";
 @import "../colors";
 
-.hero {
-  position: relative;
-  box-sizing: border-box;
-}
-
 .hero-dark-overlay {
   position: absolute;
   left: 0;
@@ -15,7 +10,8 @@
 }
 
 .primary-hero {
-  height: 600px;
+  margin-top: 92px;
+  min-height: 600px;
   position: relative;
   background-image: url("assets/home/mobile/image-hero-paramour.jpg");
   background-size: cover;
@@ -78,6 +74,9 @@
   margin-top: 6rem;
   height: 560px;
   background-image: url("assets/home/mobile/image-small-team.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
 }
 
 .secondary-hero .hero-content button {
@@ -88,8 +87,12 @@
 .featured {
   padding-bottom: 5rem;
   margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 130px;
   position: relative;
+}
+
+.featured-cards-container {
+  margin-bottom: 24px;
 }
 
 .featured-header button {
@@ -141,6 +144,7 @@
 
 @include tablet {
   .primary-hero {
+    margin-top: 0;
     background-image: url("assets/home/tablet/image-hero-paramour.jpg");
   }
 

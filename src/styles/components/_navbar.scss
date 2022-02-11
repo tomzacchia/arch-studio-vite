@@ -2,9 +2,12 @@
 @import "../typography";
 @import "../colors";
 
+$navbar-padding: 32px;
+$navbar-height: 92px;
+
 .nav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: $navbar-padding;
+  padding-bottom: $navbar-padding;
   position: fixed;
   z-index: 501;
   top: 0;
@@ -16,8 +19,9 @@
 }
 
 .nav-title {
-  @extend .h3;
   letter-spacing: -4px;
+  font-size: 32px;
+  font-weight: 900;
 }
 
 .menu {
@@ -28,7 +32,7 @@
   display: initial;
   position: fixed;
   z-index: 501;
-  top: 57px;
+  top: $navbar-height;
   right: -22rem;
   display: flex;
   flex-direction: column;
@@ -47,10 +51,10 @@
 
 .dark-overlay {
   width: 100%;
-  height: calc(100% - 57px);
+  height: calc(100% - $navbar-height);
   position: fixed;
   z-index: 500;
-  top: 57px;
+  top: $navbar-height;
   left: 0;
   z-index: 50;
   background-color: #1b1d23a3;
@@ -63,11 +67,7 @@
 }
 
 .hamburger {
-  height: 10px;
-  width: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  font-size: 26px;
 }
 
 .hamburger div {

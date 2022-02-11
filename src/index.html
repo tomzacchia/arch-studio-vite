@@ -42,30 +42,32 @@
       </div>
     </nav>
 
-    <section class="container-no-padding-sm primary-hero">
-      <div class="hero-dark-overlay"></div>
-      <div class="hero-content">
-        <h1 class="h1-bold white-text"> Project Paramour</h1>
-        <p class="hero-description">
-          Project made for an art museum near Southwest London. Project Paramour
-          is a statement of bold, modern architecture.
-        </p>
-        <button class="button">
-          <p>See Our Portfolio</p>
-          <i class="fas fa-arrow-right"></i>
-        </button>
-      </div>
-      <div class="hero-pagination">
-        <button
-          class="square-button square-button-very-dark-blue"
-          data-index="01"
-          >01</button
-        >
-        <button class="square-button" data-index="02">02</button>
-        <button class="square-button" data-index="03">03</button>
-        <button class="square-button" data-index="04">04</button>
-      </div>
-    </section>
+    <div class="container-no-padding-sm">
+      <section class="primary-hero">
+        <div class="hero-dark-overlay"></div>
+        <div class="hero-content">
+          <h1 class="h1-bold white-text"> Project Paramour</h1>
+          <p class="hero-description">
+            Project made for an art museum near Southwest London. Project
+            Paramour is a statement of bold, modern architecture.
+          </p>
+          <button class="button">
+            <p>See Our Portfolio</p>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="hero-pagination">
+          <button
+            class="square-button square-button-very-dark-blue"
+            data-index="01"
+            >01</button
+          >
+          <button class="square-button" data-index="02">02</button>
+          <button class="square-button" data-index="03">03</button>
+          <button class="square-button" data-index="04">04</button>
+        </div>
+      </section>
+    </div>
 
     <section class="container welcome">
       <h1 class="h1-large welcome-large-text"> Welcome </h1>
@@ -94,54 +96,75 @@
       </div>
     </section>
 
-    <section class="secondary-hero hero">
-      <div class="hero-dark-overlay"></div>
-      <div class="hero-content">
-        <h1 class="h1-bold white-text"> Small team, big ideas </h1>
+    <div class="container-no-padding-sm">
+      <section class="secondary-hero">
+        <div class="hero-dark-overlay"></div>
+        <div class="hero-content">
+          <h1 class="h1-bold white-text"> Small team, big ideas </h1>
+          <button class="button">
+            <p>About Us</p>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <section class="container featured">
+      <div class="featured-header">
+        <h2 class="h2"> Featured </h2>
         <button class="button">
-          <p>About Us</p>
+          <p>Sell All</p>
           <i class="fas fa-arrow-right"></i>
         </button>
       </div>
+
+      <div class="featured-cards-container">
+        <div class="featured-card featured-1">
+          <h1 class="h1-large"> 1 </h1>
+          <div class="linear-overlay"></div>
+          <div class="featured-card-text">
+            <h3 class="h3"> Project Del Sol </h3>
+            <p class="pointer"> View All Projects </p>
+          </div>
+        </div>
+        <div class="featured-card featured-2">
+          <h1 class="h1-large"> 2 </h1>
+          <div class="linear-overlay"></div>
+          <div class="featured-card-text">
+            <h3 class="h3"> 228B Tower </h3>
+            <p class="pointer"> View All Projects </p>
+          </div>
+        </div>
+        <div class="featured-card featured-3">
+          <h1 class="h1-large"> 3 </h1>
+          <div class="linear-overlay"></div>
+          <div class="featured-card-text">
+            <h3 class="h3"> Le Prototype </h3>
+            <p class="pointer"> View All Projects </p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <footer class="footer container-no-padding-sm">
+      <div class="footer-logo">
+        <p>arch</p>
+      </div>
+      <div class="footer-main-container">
+        <ul>
+          <li>Portfolio</li>
+          <li>About Us</li>
+          <li> Contact</li>
+        </ul>
+        <div class="footer-button-container">
+          <button class="button">
+            <p>See Our Portfolio</p>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
   </body>
-
-  <section class="container featured">
-    <div class="featured-header">
-      <h2 class="h2"> Featured </h2>
-      <button class="button">
-        <p>Sell All</p>
-        <i class="fas fa-arrow-right"></i>
-      </button>
-    </div>
-
-    <div class="featured-cards-container">
-      <div class="featured-card featured-1">
-        <h1 class="h1-large"> 1 </h1>
-        <div class="linear-overlay"></div>
-        <div class="featured-card-text">
-          <h3 class="h3"> Project Del Sol </h3>
-          <p class="pointer"> View All Projects </p>
-        </div>
-      </div>
-      <div class="featured-card featured-2">
-        <h1 class="h1-large"> 2 </h1>
-        <div class="linear-overlay"></div>
-        <div class="featured-card-text">
-          <h3 class="h3"> 228B Tower </h3>
-          <p class="pointer"> View All Projects </p>
-        </div>
-      </div>
-      <div class="featured-card featured-3">
-        <h1 class="h1-large"> 3 </h1>
-        <div class="linear-overlay"></div>
-        <div class="featured-card-text">
-          <h3 class="h3"> Le Prototype </h3>
-          <p class="pointer"> View All Projects </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script type="module" src="/main.js"></script>
 </html>
