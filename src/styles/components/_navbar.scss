@@ -1,9 +1,9 @@
 @import "../mixins";
 @import "../typography";
 @import "../colors";
+@import "../variables";
 
 $navbar-padding: 32px;
-$navbar-height: 92px;
 
 .nav {
   padding-top: $navbar-padding;
@@ -78,6 +78,7 @@ $navbar-height: 92px;
 
 @include tablet {
   .nav {
+    margin-bottom: 0px;
     padding-top: 2rem;
     padding-bottom: 2rem;
     justify-content: flex-start;

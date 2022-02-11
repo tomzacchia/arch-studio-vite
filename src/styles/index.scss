@@ -1,6 +1,6 @@
 @import "mixins";
 @import "colors";
-
+@import "variables";
 .hero-dark-overlay {
   position: absolute;
   left: 0;
@@ -10,7 +10,7 @@
 }
 
 .primary-hero {
-  margin-top: 92px;
+  margin-top: $navbar-height;
   min-height: 600px;
   position: relative;
   background-image: url("../assets/home/mobile/image-hero-paramour.jpg");
