@@ -1,6 +1,6 @@
 export const navBarInnerHTML = `
 <p class="nav-title pointer">
-        <a href="index.html" style="color: inherit">Arch</a>
+        <a href="../index.html" style="color: inherit">Arch</a>
       </p>
       <ul class="menu">
         <li class="menu-item">
