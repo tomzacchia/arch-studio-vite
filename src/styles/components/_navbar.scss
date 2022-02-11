@@ -37,7 +37,7 @@ $navbar-height: 92px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  transition: all 1s ease-in-out;
+  transition: all 500ms ease-in-out;
 
   li {
     list-style: none;
@@ -46,7 +46,7 @@ $navbar-height: 92px;
 }
 
 .animate-menu {
-  transform: translateX(-22rem);
+  right: 0rem;
 }
 
 .dark-overlay {

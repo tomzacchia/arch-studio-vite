@@ -1,5 +1,7 @@
 import "./style.scss";
 
+// const
+
 var is_bars = true;
 const hamburger = document.querySelector(".hamburger");
 const darkOverlayNode = document.querySelector(".dark-overlay");
@@ -46,15 +48,15 @@ function removeMenuAnimateClassIfExists() {
 const featuredCardConfig = [
   {
     title: "Project Del Sol",
-    bgImageUrl: "/assets/portfolio/mobile/image-del-sol.jpg",
+    bgImageUrl: "assets/portfolio/mobile/image-del-sol.jpg",
   },
   {
     title: "228B Tower",
-    bgImageUrl: "/assets/portfolio/mobile/image-228b.jpg",
+    bgImageUrl: "assets/portfolio/mobile/image-228b.jpg",
   },
   {
     title: "Le Prototype",
-    bgImageUrl: "/assets/portfolio/mobile/image-prototype.jpg",
+    bgImageUrl: "assets/portfolio/mobile/image-prototype.jpg",
   },
 ];
 
@@ -62,8 +64,8 @@ function getFeaturedCardHTML() {
   return featuredCardConfig
     .map((config, index) => {
       return `
-            <div class="featured-card featured-${index}" style="background-image: url(${config.bgImageUrl})">
-          <h1 class="h1-large"> ${index} </h1>
+            <div class="featured-card featured-${index + 1}">
+          <h1 class="h1-large"> ${index + 1} </h1>
           <div class="linear-overlay"></div>
           <div class="featured-card-text">
             <h3 class="h3"> ${config.title} </h3>
