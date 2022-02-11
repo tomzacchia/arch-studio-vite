@@ -17,14 +17,8 @@
   background-size: cover;
 }
 
-.hero-content {
-  padding: 0 2rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  z-index: 20;
+.primary-hero .hero-content {
+  display: none;
 }
 
 .hero-content h1 {
@@ -79,6 +73,17 @@
   position: relative;
 }
 
+.secondary-hero .hero-content {
+  display: inline;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 20;
+}
+
 .secondary-hero .hero-content button {
   margin-top: 2rem;
 }
@@ -107,16 +112,6 @@
   height: 240px;
   background-size: cover;
   position: relative;
-}
-
-.featured-card.featured-1 {
-  background-image: url("assets/portfolio/mobile/image-del-sol.jpg");
-}
-.featured-card.featured-2 {
-  background-image: url("assets/portfolio/mobile/image-228b.jpg");
-}
-.featured-card.featured-3 {
-  background-image: url("assets/portfolio/mobile/image-prototype.jpg");
 }
 
 .featured-card h1 {
@@ -150,6 +145,16 @@
 
   .primary-hero .hero-description {
     width: 29rem;
+  }
+
+  .primary-hero .hero-content {
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 20;
   }
 
   .welcome {
@@ -213,6 +218,7 @@
   .primary-hero {
     background-image: url("assets/home/desktop/image-hero-paramour.jpg");
   }
+
   .hero-content {
     padding-left: 190px;
   }

@@ -30,11 +30,19 @@
     </section>
 
     <nav class="container nav">
-      <p class="nav-title pointer"> Arch </p>
+      <p class="nav-title pointer">
+        <a href="index.html" style="color: inherit">Arch</a>
+      </p>
       <ul class="menu">
-        <li class="menu-item"> Portfolio </li>
-        <li class="menu-item"> About Us </li>
-        <li class="menu-item"> Contact </li>
+        <li class="menu-item">
+          <a href="index.html" style="color: inherit">Portfolio</a>
+        </li>
+        <li class="menu-item">
+          <a href="index.html" style="color: inherit">About Us</a>
+        </li>
+        <li class="menu-item">
+          <a href="index.html" style="color: inherit">Contact</a>
+        </li>
       </ul>
       <div class="dark-overlay"></div>
       <div class="hamburger">
@@ -51,12 +59,15 @@
             Project made for an art museum near Southwest London. Project
             Paramour is a statement of bold, modern architecture.
           </p>
-          <button class="button">
-            <p>See Our Portfolio</p>
-            <i class="fas fa-arrow-right"></i>
-          </button>
+          <a href="index.html">
+            <button class="button">
+              <p>See Our Portfolio</p>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </a>
         </div>
         <div class="hero-pagination">
+          <!-- TODO: animate gallery -->
           <button
             class="square-button square-button-very-dark-blue"
             data-index="01"
@@ -101,10 +112,13 @@
         <div class="hero-dark-overlay"></div>
         <div class="hero-content">
           <h1 class="h1-bold white-text"> Small team, big ideas </h1>
-          <button class="button">
-            <p>About Us</p>
-            <i class="fas fa-arrow-right"></i>
-          </button>
+
+          <a href="/pages/about-us.html">
+            <button class="button">
+              <p>About Us</p>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </a>
         </div>
       </section>
     </div>
@@ -112,55 +126,51 @@
     <section class="container featured">
       <div class="featured-header">
         <h2 class="h2"> Featured </h2>
-        <button class="button">
-          <p>Sell All</p>
-          <i class="fas fa-arrow-right"></i>
-        </button>
+        <a href="/pages/about-us.html">
+          <button class="button">
+            <p>See All</p>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </a>
       </div>
 
       <div class="featured-cards-container">
-        <div class="featured-card featured-1">
+        <!-- <div class="featured-card featured-1">
           <h1 class="h1-large"> 1 </h1>
           <div class="linear-overlay"></div>
           <div class="featured-card-text">
             <h3 class="h3"> Project Del Sol </h3>
-            <p class="pointer"> View All Projects </p>
+            <p class="pointer">
+              <a href="index.html" style="color: inherit">View All Projects </a>
+            </p>
           </div>
-        </div>
-        <div class="featured-card featured-2">
-          <h1 class="h1-large"> 2 </h1>
-          <div class="linear-overlay"></div>
-          <div class="featured-card-text">
-            <h3 class="h3"> 228B Tower </h3>
-            <p class="pointer"> View All Projects </p>
-          </div>
-        </div>
-        <div class="featured-card featured-3">
-          <h1 class="h1-large"> 3 </h1>
-          <div class="linear-overlay"></div>
-          <div class="featured-card-text">
-            <h3 class="h3"> Le Prototype </h3>
-            <p class="pointer"> View All Projects </p>
-          </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
-    <footer class="footer container-no-padding-sm">
+    <footer class="footer container-no-padding">
       <div class="footer-logo">
         <p>arch</p>
       </div>
       <div class="footer-main-container">
         <ul>
-          <li>Portfolio</li>
-          <li>About Us</li>
-          <li> Contact</li>
+          <li>
+            <a href="index.html" style="color: inherit">Portfolio</a>
+          </li>
+          <li>
+            <a href="index.html" style="color: inherit">About Us</a>
+          </li>
+          <li>
+            <a href="index.html" style="color: inherit">Contact</a>
+          </li>
         </ul>
         <div class="footer-button-container">
-          <button class="button">
-            <p>See Our Portfolio</p>
-            <i class="fas fa-arrow-right"></i>
-          </button>
+          <a href="index.html">
+            <button class="button">
+              <p>See Our Portfolio</p>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </a>
         </div>
       </div>
     </footer>

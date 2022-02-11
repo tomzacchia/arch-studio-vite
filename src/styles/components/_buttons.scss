@@ -8,14 +8,14 @@
   padding: 23.5px 25px;
   width: fit-content;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   background-color: $very-dark-blue;
   color: white;
   border: none;
   cursor: pointer;
 
   &:hover {
-    background-color: #979797;
+    background-color: $dark-grey;
   }
 }
 

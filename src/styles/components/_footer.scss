@@ -48,7 +48,8 @@ $element-margin-top-sm: 32px;
 
   @include tablet {
     padding: 0;
-    width: 90%;
+    padding-left: 120px;
+    width: 100%;
     flex-direction: row;
   }
 }

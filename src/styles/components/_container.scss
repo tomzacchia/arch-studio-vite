@@ -10,6 +10,12 @@ $default-padding-desktop: 165px;
   box-sizing: border-box;
 }
 
+.container-no-padding {
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .container-no-padding-sm {
   @extend .container;
   padding: 0;
