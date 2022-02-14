@@ -3,6 +3,7 @@ const { defineConfig } = require("vite");
 require("dotenv").config();
 
 const mode = process.env.APP_ENV;
+const VERCEL_URL = process.env.VERCEL_URL;
 
 module.exports = defineConfig({
   root: "src",
@@ -20,10 +21,12 @@ module.exports = defineConfig({
 });
 
 function getEnvBaseRoute() {
-  console.log("env is : ", mode);
+  if (mode === "development") {
+    return "http://localhost:3000";
+  } else {
+    return VERCEL_URL;
+  }
 }
-
-getEnvBaseRoute();
 
 function htmlPlugin() {
   return {
@@ -47,6 +50,7 @@ function htmlPlugin() {
   };
 }
 
+// TODO: ABSOLUTE ROUTING
 const headMarkup = `
   <head>
     <meta charset="UTF-8" />
@@ -76,13 +80,13 @@ const headMarkup = `
 
 const navBarInnerHTML = `
       <p class="nav-title pointer">
-        <a href="../index.html" style="color: inherit">Arch</a>
+        <a href="${getEnvBaseRoute()}" style="color: inherit">Arch</a>
       </p>
       <ul class="menu">
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="portfolio/"
+            href="${getEnvBaseRoute()}/portfolio/"
             style="color: inherit"
             >Portfolio</a
           >
@@ -90,7 +94,7 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="about/"
+            href="${getEnvBaseRoute()}/about/"
             style="color: inherit"
             >About Us</a
           >
@@ -98,7 +102,7 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="contact/"
+            href="${getEnvBaseRoute()}/contact/"
             style="color: inherit"
             >Contact</a
           >
@@ -119,7 +123,7 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="index.html"
+              href="${getEnvBaseRoute()}/portfolio/"
               style="color: inherit"
               >Portfolio</a
             >
@@ -127,7 +131,7 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="pages/about-us.html"
+              href="${getEnvBaseRoute()}/about/"
               style="color: inherit"
               >About Us</a
             >
@@ -135,7 +139,7 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="index.html"
+              href="${getEnvBaseRoute()}/contact"
               style="color: inherit"
               >Contact</a
             >
