@@ -3,10 +3,6 @@ import { footerInnerHTML, navBarInnerHTML } from "./markups";
 
 // NAVBAR & FOOTER ========================================
 const navContainer = document.querySelector(".nav");
-const footerContainer = document.querySelector(".footer");
-
-navContainer.innerHTML = navBarInnerHTML;
-footerContainer.innerHTML = footerInnerHTML;
 
 // MENU ANIMATION ========================================
 var is_bars = true;
