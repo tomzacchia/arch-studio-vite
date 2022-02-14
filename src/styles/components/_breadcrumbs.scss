@@ -10,11 +10,12 @@
     display: initial;
     position: fixed;
     z-index: 200;
-    top: 79px;
-    left: -45px;
+    top: 0px;
+    left: 67px;
     display: flex;
     align-items: center;
     transform: rotate(90deg);
+    transform-origin: top left;
   }
 
   .breadcrumb-line {
