@@ -13,7 +13,8 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
-        about: resolve(__dirname, "src/portfolio/index.html"),
+        about: resolve(__dirname, "src/pages/portfolio/index.html"),
+        contact: resolve(__dirname, "src/pages/contact/index.html"),
       },
     },
   },
@@ -86,7 +87,7 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="${getEnvBaseRoute()}/portfolio/"
+            href="${getEnvBaseRoute()}/pages/portfolio/"
             style="color: inherit"
             >Portfolio</a
           >
@@ -94,7 +95,7 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="${getEnvBaseRoute()}/about/"
+            href="${getEnvBaseRoute()}/pages/about/"
             style="color: inherit"
             >About Us</a
           >
@@ -102,7 +103,7 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="${getEnvBaseRoute()}/contact/"
+            href="${getEnvBaseRoute()}/pages/contact/"
             style="color: inherit"
             >Contact</a
           >
@@ -123,7 +124,7 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="${getEnvBaseRoute()}/portfolio/"
+              href="${getEnvBaseRoute()}/pages/portfolio/"
               style="color: inherit"
               >Portfolio</a
             >
@@ -131,7 +132,7 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="${getEnvBaseRoute()}/about/"
+              href="${getEnvBaseRoute()}/pages/about/"
               style="color: inherit"
               >About Us</a
             >
@@ -139,7 +140,7 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="${getEnvBaseRoute()}/contact"
+              href="${getEnvBaseRoute()}/pages/contact"
               style="color: inherit"
               >Contact</a
             >

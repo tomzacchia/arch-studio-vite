@@ -1,7 +1,5 @@
 import "./main.scss";
-import { footerInnerHTML, navBarInnerHTML } from "./markups";
 
-// NAVBAR & FOOTER ========================================
 const navContainer = document.querySelector(".nav");
 
 // MENU ANIMATION ========================================
