@@ -3,11 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --open --host"
   },
   "devDependencies": {
+    "sass": "^1.49.7",
     "vite": "^2.8.0"
   }
 }

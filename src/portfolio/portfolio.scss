@@ -1,0 +1,59 @@
+@import "../styles/colors";
+@import "../styles/typography";
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.portfolio {
+  margin-top: $navbar-height * 2;
+  margin-bottom: $navbar-height;
+  @include tablet {
+    margin-top: 0;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.portfolio-card {
+  position: relative;
+  height: 240px;
+  background-size: cover;
+  background-position: center center;
+
+  @include desktop {
+    width: 350px;
+    height: 560px;
+  }
+}
+
+.portfolio-card:not(:first-child) {
+  margin-top: 24px;
+}
+
+.portfolio-card:first-child {
+  @include desktop {
+    margin-top: 24px;
+  }
+}
+
+.portfolio-card .linear-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.500437675070028) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.portfolio-card .portfolio-card-text {
+  position: absolute;
+  z-index: 50;
+  color: white;
+  bottom: 2rem;
+  left: 2rem;
+}

@@ -1,0 +1,115 @@
+@import "../mixins";
+@import "../typography";
+@import "../colors";
+@import "../variables";
+
+$navbar-padding: 32px;
+
+.nav {
+  padding-top: $navbar-padding;
+  padding-bottom: $navbar-padding;
+  position: fixed;
+  z-index: 501;
+  top: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-title {
+  letter-spacing: -4px;
+  font-size: 32px;
+  font-weight: 900;
+}
+
+.menu {
+  margin: 0;
+  width: 300px;
+  height: 200px;
+  background: $very-light-grey;
+  display: initial;
+  position: fixed;
+  z-index: 501;
+  top: $navbar-height;
+  right: -22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: all 500ms ease-in-out;
+
+  li {
+    list-style: none;
+    font-weight: bold;
+  }
+}
+
+.animate-menu {
+  right: 0rem;
+}
+
+.dark-overlay {
+  width: 100%;
+  height: calc(100% - $navbar-height);
+  position: fixed;
+  z-index: 500;
+  top: $navbar-height;
+  left: 0;
+  z-index: 50;
+  background-color: #1b1d23a3;
+  display: none;
+  transition: all 0.3s;
+}
+
+.animate-overlay {
+  display: initial;
+}
+
+.hamburger {
+  font-size: 26px;
+}
+
+.hamburger div {
+  height: 2px;
+  width: 100%;
+  background-color: black;
+}
+
+@include tablet {
+  .nav {
+    margin-bottom: 0px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
+    position: relative;
+    z-index: initial;
+  }
+
+  .nav-title {
+    font-size: 26px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    padding: 0;
+    padding-left: 3rem;
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    flex-direction: row;
+    position: initial;
+
+    li {
+      padding: 0 2rem;
+      font-weight: 500;
+    }
+  }
+
+  .dark-overlay {
+    display: none;
+  }
+}

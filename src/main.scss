@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "./styles/typography";
+@import "./styles/colors";
+@import "./styles/mixins";
+
+// COMPONENTS  ===========================
+@import "./styles/components/buttons";
+@import "./styles/components/container";
+@import "./styles/components/navbar";
+@import "./styles/components/footer";
+@import "./styles/components/breadcrumbs";
+
+.anchor-padding-top-bottom {
+  padding: 12px 0;
+}
