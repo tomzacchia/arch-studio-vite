@@ -24,7 +24,7 @@ function getEnvBaseRoute() {
   if (mode === "development") {
     return "http://localhost:3000";
   } else {
-    return VERCEL_URL;
+    return `https://${VERCEL_URL}`;
   }
 }
 
