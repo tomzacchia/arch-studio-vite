@@ -1,5 +1,8 @@
 const { resolve } = require("path");
 const { defineConfig } = require("vite");
+require("dotenv").config();
+
+const mode = process.env.APP_ENV;
 
 module.exports = defineConfig({
   root: "src",
@@ -16,6 +19,12 @@ module.exports = defineConfig({
   plugins: [htmlPlugin()],
 });
 
+function getEnvBaseRoute() {
+  console.log("env is : ", mode);
+}
+
+getEnvBaseRoute();
+
 function htmlPlugin() {
   return {
     name: "pre-transform",
@@ -26,7 +35,6 @@ function htmlPlugin() {
           <!DOCTYPE html>
           <html lang="en">
             ${headMarkup}
-
             <body>
               <nav class="container nav">${navBarInnerHTML}</nav>
               ${html}
@@ -67,14 +75,14 @@ const headMarkup = `
 `;
 
 const navBarInnerHTML = `
-<p class="nav-title pointer">
+      <p class="nav-title pointer">
         <a href="../index.html" style="color: inherit">Arch</a>
       </p>
       <ul class="menu">
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="pages/about-us.html"
+            href="portfolio/"
             style="color: inherit"
             >Portfolio</a
           >
@@ -82,7 +90,7 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="pages/about-us.html"
+            href="about/"
             style="color: inherit"
             >About Us</a
           >
@@ -90,7 +98,7 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="index.html"
+            href="contact/"
             style="color: inherit"
             >Contact</a
           >
