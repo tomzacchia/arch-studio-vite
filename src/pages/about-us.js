@@ -90,11 +90,20 @@ const cardsConfig = [
 const portfolioContainer = document.querySelector(".portfolio");
 
 const cardsHTML = cardsConfig
-  .map(
-    (card, index) => `
+  .map((card, index) => {
+    const windowWitdh = window.innerWidth;
+    let bgImageUrl = card.bgImageUrlMobile;
+
+    if (windowWitdh >= 1440) {
+      bgImageUrl = card.bgImageUrlDesktop;
+    } else if (windowWitdh >= 768) {
+      bgImageUrl = card.bgImageUrlTablet;
+    }
+
+    return `
         <div class="portfolio-card portfolio-card-${
           index + 1
-        }" style="background-image: url(${card.bgImageUrlMobile})">
+        }" style="background-image: url(${bgImageUrl})">
         <div class="linear-overlay"></div>
         <div class="portfolio-card-text">
           <h3 class="h3"> ${card.name} </h3>
@@ -102,9 +111,8 @@ const cardsHTML = cardsConfig
             ${card.subtitle}
           </p>
         </div>
-      </div>
-`
-  )
+      </div>`;
+  })
   .join(" ");
 
 portfolioContainer.innerHTML = cardsHTML;
