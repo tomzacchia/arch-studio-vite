@@ -1,4 +1,4 @@
-import "./about-us.scss";
+import "./portfolio.scss";
 
 import cardsConfig from "./constants";
 
