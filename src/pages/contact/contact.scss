@@ -4,11 +4,23 @@
 @import "../../styles/mixins";
 @import "../../styles//utility";
 
+.before-decorator {
+  content: "";
+  width: 65px;
+  height: 1px;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  background-color: $light-grey;
+}
+
 .contact-intro {
   position: relative;
   margin-top: $navbar-height;
+  margin-bottom: 60px;
   @include tablet {
-    margin-top: 0;
+    margin: 0;
+    margin-bottom: 200px;
   }
 }
 
@@ -96,21 +108,100 @@
 }
 
 .contact-intro h2::before {
+  @extend .before-decorator;
   display: none;
 
   @include tablet {
     display: initial;
-    content: "";
-    width: 65px;
-    height: 1px;
-    position: absolute;
-    top: -70px;
-    left: 0;
-    background-color: $light-grey;
   }
 }
 
 .contact-intro p {
   color: $dark-grey;
   max-width: 455px;
+}
+
+// CONTACT DETAILS ====================================
+.contact-details {
+  position: relative;
+  padding-top: 70px;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contact-details::before {
+  @extend .before-decorator;
+
+  top: 0;
+  left: 35px;
+
+  @include tablet {
+    left: 95px;
+  }
+}
+
+.contact-details h2 {
+  margin-bottom: 60px;
+
+  @include desktop {
+    width: min-content;
+  }
+}
+
+.contact-details .contact-details-card {
+  margin-bottom: 40px;
+}
+
+.contact-details-card {
+  width: 100%;
+  display: inline-block;
+
+  @include desktop {
+    max-width: 350px;
+  }
+}
+
+.contact-details-card > div {
+  @include tablet {
+    float: left;
+  }
+
+  @include desktop {
+    float: none;
+  }
+}
+
+.contact-details-card > a {
+  @include tablet {
+    float: right;
+  }
+
+  @include desktop {
+    float: none;
+  }
+}
+
+.contact-details-card-info p {
+  font-size: 15px;
+  line-height: 35px;
+  color: $dark-grey;
+}
+
+.contact-details-card-info p:first-child {
+  font-weight: bold;
+}
+
+.contact-details-card button {
+  padding-left: 0;
+
+  @include tablet {
+    margin-top: 50px;
+  }
+
+  @include desktop {
+    margin-top: 25px;
+  }
 }
