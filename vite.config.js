@@ -1,5 +1,9 @@
 const { resolve } = require("path");
 const { defineConfig } = require("vite");
+require("dotenv").config();
+
+const mode = process.env.APP_ENV;
+const VERCEL_URL = process.env.VERCEL_URL;
 
 module.exports = defineConfig({
   root: "src",
@@ -9,12 +13,23 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
-        about: resolve(__dirname, "src/portfolio/index.html"),
+        about: resolve(__dirname, "src/pages/portfolio/index.html"),
+        contact: resolve(__dirname, "src/pages/contact/index.html"),
       },
     },
   },
   plugins: [htmlPlugin()],
 });
+
+function getEnvBaseRoute() {
+  if (mode === "development") {
+    return "http://localhost:3000";
+  } else if (mode === "production") {
+    return `https://${VERCEL_URL}`;
+  } else {
+    return `http://10.0.0.8:4173`;
+  }
+}
 
 function htmlPlugin() {
   return {
@@ -26,7 +41,6 @@ function htmlPlugin() {
           <!DOCTYPE html>
           <html lang="en">
             ${headMarkup}
-
             <body>
               <nav class="container nav">${navBarInnerHTML}</nav>
               ${html}
@@ -39,6 +53,7 @@ function htmlPlugin() {
   };
 }
 
+// TODO: ABSOLUTE ROUTING
 const headMarkup = `
   <head>
     <meta charset="UTF-8" />
@@ -48,7 +63,7 @@ const headMarkup = `
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="${getEnvBaseRoute()}/assets/favicon-32x32.png"
     />
 
     <title>Arch Studio</title>
@@ -67,22 +82,22 @@ const headMarkup = `
 `;
 
 const navBarInnerHTML = `
-<p class="nav-title pointer">
-        <a href="../index.html" style="color: inherit">Arch</a>
+      <p class="nav-title pointer">
+        <a href="${getEnvBaseRoute()}" style="color: inherit">Arch</a>
       </p>
       <ul class="menu">
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="pages/about-us.html"
+            href="${getEnvBaseRoute()}/pages/portfolio/"
             style="color: inherit"
             >Portfolio</a
           >
         </li>
-        <li class="menu-item">
+        <li class="menu-item" style="display: none">
           <a
             class="anchor-padding-top-bottom"
-            href="pages/about-us.html"
+            href="${getEnvBaseRoute()}/pages/about/"
             style="color: inherit"
             >About Us</a
           >
@@ -90,7 +105,7 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="index.html"
+            href="${getEnvBaseRoute()}/pages/contact/"
             style="color: inherit"
             >Contact</a
           >
@@ -111,15 +126,15 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="index.html"
+              href="${getEnvBaseRoute()}/pages/portfolio/"
               style="color: inherit"
               >Portfolio</a
             >
           </li>
-          <li>
+          <li style="display: none">
             <a
               class="anchor-padding-top-bottom"
-              href="pages/about-us.html"
+              href="${getEnvBaseRoute()}/pages/about/"
               style="color: inherit"
               >About Us</a
             >
@@ -127,14 +142,14 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="index.html"
+              href="${getEnvBaseRoute()}/pages/contact/"
               style="color: inherit"
               >Contact</a
             >
           </li>
         </ul>
         <div class="footer-button-container">
-          <a href="index.html">
+          <a href="${getEnvBaseRoute()}/pages/portfolio/">
             <button class="button">
               <p>See Our Portfolio</p>
               <i class="fas fa-arrow-right"></i>

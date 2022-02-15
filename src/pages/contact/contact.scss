@@ -1,0 +1,281 @@
+@import "../../styles/colors";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles//utility";
+
+// UTILITY CLASSES ========================================
+
+.before-decorator {
+  content: "";
+  width: 65px;
+  height: 1px;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  background-color: $light-grey;
+}
+
+.picture-full-width-centered {
+  display: flex;
+}
+
+.picture-full-width-centered img {
+  width: 100%;
+  object-fit: cover;
+}
+
+// CONTACT INTRO ========================================
+
+.contact-intro {
+  position: relative;
+  margin-top: $navbar-height;
+  margin-bottom: 60px;
+  @include tablet {
+    margin: 0;
+    margin-bottom: 200px;
+  }
+}
+
+.contact-intro picture {
+  width: 100%;
+  height: 240px;
+
+  @include tablet {
+    height: 720px;
+  }
+
+  @include desktop {
+    position: absolute;
+    width: 50%;
+  }
+}
+
+.contact-intro .contact-intro-content::before {
+  content: "";
+  width: 90%;
+  height: 51px;
+  position: absolute;
+  z-index: 10;
+  top: 190px;
+  left: 0;
+  background-color: white;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.contact-intro .contact-intro-content {
+  padding-top: 35px;
+
+  @include tablet {
+    padding: 160px 0 0 50px;
+    width: 515px;
+    right: 97px;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    background: white;
+  }
+
+  @include desktop {
+    padding-left: 175px;
+    width: 50%;
+  }
+}
+
+.contact-intro-content-title {
+  display: none;
+
+  @include tablet {
+    display: initial;
+    position: absolute;
+    top: -100px;
+    right: 0;
+    color: $very-light-grey;
+    font-size: 120px;
+    letter-spacing: -3px;
+    line-height: 200px;
+  }
+
+  @include desktop {
+    font-size: 200px;
+    left: -200px;
+  }
+}
+
+.contact-intro-content h2 {
+  margin-bottom: 15px;
+  position: relative;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+}
+
+.contact-intro h2::before {
+  @extend .before-decorator;
+  display: none;
+
+  @include tablet {
+    display: initial;
+  }
+}
+
+.contact-intro p {
+  color: $dark-grey;
+  max-width: 455px;
+}
+
+// CONTACT DETAILS ====================================
+.contact-details {
+  position: relative;
+  padding-top: 70px;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contact-details::before {
+  @extend .before-decorator;
+
+  top: 0;
+  left: 35px;
+
+  @include tablet {
+    left: 95px;
+  }
+}
+
+.contact-details h2 {
+  margin-bottom: 60px;
+
+  @include desktop {
+    width: min-content;
+  }
+}
+
+.contact-details .contact-details-card {
+  margin-bottom: 40px;
+}
+
+.contact-details-card {
+  width: 100%;
+  display: inline-block;
+
+  @include desktop {
+    max-width: 350px;
+  }
+}
+
+.contact-details-card > div {
+  @include tablet {
+    float: left;
+  }
+
+  @include desktop {
+    float: none;
+  }
+}
+
+.contact-details-card > a {
+  @include tablet {
+    float: right;
+  }
+
+  @include desktop {
+    float: none;
+  }
+}
+
+.contact-details-card-info p {
+  font-size: 15px;
+  line-height: 35px;
+  color: $dark-grey;
+}
+
+.contact-details-card-info p:first-child {
+  font-weight: bold;
+}
+
+.contact-details-card button {
+  padding-left: 0;
+
+  @include tablet {
+    margin-top: 50px;
+  }
+
+  @include desktop {
+    margin-top: 25px;
+  }
+}
+
+// CONTACT MAP ====================================
+.contact-map {
+  margin-bottom: 75px;
+}
+
+.contact-map picture {
+  height: 370px;
+
+  @include tablet {
+    height: 560px;
+  }
+}
+
+.contact-form {
+  margin-bottom: 250px;
+  display: inline-block;
+}
+
+.contact-form h2 {
+  @include desktop {
+    margin-top: 50px;
+
+    width: min-content;
+    float: left;
+  }
+}
+
+.contact-form form {
+  max-width: 700px;
+  position: relative;
+
+  @include desktop {
+    width: 60%;
+    float: right;
+  }
+}
+
+.contact-form button {
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+}
+
+.contact-form input {
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-bottom: solid thin black;
+  border-radius: 0;
+
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+
+.contact-form input:focus {
+  outline: none;
+}
+
+input#message {
+  height: 100px;
+}

@@ -4,29 +4,39 @@
   cursor: pointer;
 }
 
-.button {
+.button-base {
   padding: 23.5px 25px;
   width: fit-content;
   display: flex;
   align-items: baseline;
-  background-color: $very-dark-blue;
-  color: white;
   border: none;
   cursor: pointer;
+
+  p {
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  i {
+    margin-left: 1rem;
+  }
+}
+
+.button {
+  @extend .button-base;
+  background-color: $very-dark-blue;
+  color: white;
 
   &:hover {
     background-color: $dark-grey;
   }
 }
 
-.button p {
-  font-weight: 800;
-  font-size: 15px;
-  line-height: 25px;
-}
-
-.button i {
-  margin-left: 1rem;
+.button-no-bg {
+  @extend .button-base;
+  background-color: transparent;
+  color: black;
 }
 
 .square-button {
