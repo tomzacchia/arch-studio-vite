@@ -12,14 +12,19 @@
   }
 }
 
-.contact-intro .hero-dark-overlay {
-  height: 240px;
-}
-
 .contact-intro picture {
   display: flex;
   width: 100%;
   height: 240px;
+
+  @include tablet {
+    height: 720px;
+  }
+
+  @include desktop {
+    position: absolute;
+    width: 50%;
+  }
 }
 
 .contact-intro img {
@@ -44,12 +49,68 @@
 
 .contact-intro .contact-intro-content {
   padding-top: 35px;
+
+  @include tablet {
+    padding: 160px 0 0 50px;
+    width: 515px;
+    right: 97px;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    background: white;
+  }
+
+  @include desktop {
+    padding-left: 175px;
+    width: 50%;
+  }
+}
+
+.contact-intro-content-title {
+  display: none;
+
+  @include tablet {
+    display: initial;
+    position: absolute;
+    top: -100px;
+    right: 0;
+    color: $very-light-grey;
+    font-size: 120px;
+    letter-spacing: -3px;
+    line-height: 200px;
+  }
+
+  @include desktop {
+    left: -200px;
+    font-size: 200px;
+  }
 }
 
 .contact-intro-content h2 {
   margin-bottom: 15px;
+  position: relative;
+
+  @include tablet {
+    margin-bottom: 50px;
+  }
+}
+
+.contact-intro h2::before {
+  display: none;
+
+  @include tablet {
+    display: initial;
+    content: "";
+    width: 65px;
+    height: 1px;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    background-color: $light-grey;
+  }
 }
 
 .contact-intro p {
   color: $dark-grey;
+  max-width: 455px;
 }

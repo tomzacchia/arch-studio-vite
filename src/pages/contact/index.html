@@ -3,22 +3,21 @@
   <p class="breadcrumb-text"> CONTACT </p>
 </section>
 
-<section class="contact-intro">
-  <div class="hero-dark-overlay" style="z-index: 5"></div>
-  <picture>
-    <img
-      src="../../assets/contact/mobile/image-hero.jpg"
-      srcset="
-        ../../assets/contact/desktop/image-hero.jpg,
-        ../../assets/contact/tablet/image-hero.jpg
-      "
-      sizes="(min-width: 1440px), (min-width: 768px)"
-      alt="About us"
-      style="object-fit: cover"
+<section class="contact-intro container-no-padding-sm">
+  <picture style="position: relative">
+    <source
+      media="(min-width:1440px)"
+      srcset="../../assets/contact/desktop/image-hero.jpg"
     />
+    <source
+      media="(min-width:650px)"
+      srcset="../../assets/contact/tablet/image-hero.jpg"
+    />
+    <img src="../../assets/contact/mobile/image-hero.jpg" alt="About us" />
+    <div class="hero-dark-overlay" style="z-index: 5"></div>
   </picture>
-  <h1 style="display: none"> Contact </h1>
   <div class="container contact-intro-content">
+    <h1 class="contact-intro-content-title"> Contact </h1>
     <h2 class="h2">
       Tell us about <br />
       your project
