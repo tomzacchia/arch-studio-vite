@@ -94,7 +94,7 @@ const navBarInnerHTML = `
             >Portfolio</a
           >
         </li>
-        <li class="menu-item">
+        <li class="menu-item" style="display: none">
           <a
             class="anchor-padding-top-bottom"
             href="${getEnvBaseRoute()}/pages/about/"
@@ -131,7 +131,7 @@ const footerInnerHTML = `
               >Portfolio</a
             >
           </li>
-          <li>
+          <li style="display: none">
             <a
               class="anchor-padding-top-bottom"
               href="${getEnvBaseRoute()}/pages/about/"
@@ -142,14 +142,14 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="${getEnvBaseRoute()}/pages/contact"
+              href="${getEnvBaseRoute()}/pages/contact/"
               style="color: inherit"
               >Contact</a
             >
           </li>
         </ul>
         <div class="footer-button-container">
-          <a href="index.html">
+          <a href="${getEnvBaseRoute()}/pages/portfolio/">
             <button class="button">
               <p>See Our Portfolio</p>
               <i class="fas fa-arrow-right"></i>
