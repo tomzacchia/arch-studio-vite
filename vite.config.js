@@ -13,7 +13,8 @@ module.exports = defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "src/index.html"),
-        about: resolve(__dirname, "src/portfolio/index.html"),
+        about: resolve(__dirname, "src/pages/portfolio/index.html"),
+        contact: resolve(__dirname, "src/pages/contact/index.html"),
       },
     },
   },
@@ -23,8 +24,10 @@ module.exports = defineConfig({
 function getEnvBaseRoute() {
   if (mode === "development") {
     return "http://localhost:3000";
-  } else {
+  } else if (mode === "production") {
     return `https://${VERCEL_URL}`;
+  } else {
+    return `http://10.0.0.8:4173`;
   }
 }
 
@@ -60,7 +63,7 @@ const headMarkup = `
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="${getEnvBaseRoute()}/assets/favicon-32x32.png"
     />
 
     <title>Arch Studio</title>
@@ -86,15 +89,15 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="${getEnvBaseRoute()}/portfolio/"
+            href="${getEnvBaseRoute()}/pages/portfolio/"
             style="color: inherit"
             >Portfolio</a
           >
         </li>
-        <li class="menu-item">
+        <li class="menu-item" style="display: none">
           <a
             class="anchor-padding-top-bottom"
-            href="${getEnvBaseRoute()}/about/"
+            href="${getEnvBaseRoute()}/pages/about/"
             style="color: inherit"
             >About Us</a
           >
@@ -102,7 +105,7 @@ const navBarInnerHTML = `
         <li class="menu-item">
           <a
             class="anchor-padding-top-bottom"
-            href="${getEnvBaseRoute()}/contact/"
+            href="${getEnvBaseRoute()}/pages/contact/"
             style="color: inherit"
             >Contact</a
           >
@@ -123,15 +126,15 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="${getEnvBaseRoute()}/portfolio/"
+              href="${getEnvBaseRoute()}/pages/portfolio/"
               style="color: inherit"
               >Portfolio</a
             >
           </li>
-          <li>
+          <li style="display: none">
             <a
               class="anchor-padding-top-bottom"
-              href="${getEnvBaseRoute()}/about/"
+              href="${getEnvBaseRoute()}/pages/about/"
               style="color: inherit"
               >About Us</a
             >
@@ -139,14 +142,14 @@ const footerInnerHTML = `
           <li>
             <a
               class="anchor-padding-top-bottom"
-              href="${getEnvBaseRoute()}/contact"
+              href="${getEnvBaseRoute()}/pages/contact/"
               style="color: inherit"
               >Contact</a
             >
           </li>
         </ul>
         <div class="footer-button-container">
-          <a href="index.html">
+          <a href="${getEnvBaseRoute()}/pages/portfolio/">
             <button class="button">
               <p>See Our Portfolio</p>
               <i class="fas fa-arrow-right"></i>

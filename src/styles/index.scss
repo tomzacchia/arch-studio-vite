@@ -1,13 +1,6 @@
 @import "mixins";
 @import "colors";
 @import "variables";
-.hero-dark-overlay {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #1b1d235e;
-}
 
 .primary-hero {
   margin-top: $navbar-height;
