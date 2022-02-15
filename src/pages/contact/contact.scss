@@ -214,10 +214,69 @@
 }
 
 // CONTACT MAP ====================================
+.contact-map {
+  margin-bottom: 75px;
+}
+
 .contact-map picture {
   height: 370px;
 
   @include tablet {
     height: 560px;
   }
+}
+
+.contact-form {
+  margin-bottom: 250px;
+  display: inline-block;
+}
+
+.contact-form h2 {
+  @include desktop {
+    margin-top: 50px;
+
+    width: min-content;
+    float: left;
+  }
+}
+
+.contact-form form {
+  max-width: 700px;
+  @include desktop {
+    width: 60%;
+    float: right;
+  }
+}
+
+.contact-form button {
+  position: absolute;
+  right: 0;
+  bottom: -80px;
+}
+
+.contact-form input {
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-bottom: solid thin black;
+  font-family: "Spartan", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0;
+}
+
+.contact-form input:focus {
+  outline: none;
+}
+
+input#message {
+  height: 100px;
+}
+
+input#message::placeholder {
+  position: absolute;
 }
