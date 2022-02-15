@@ -1,5 +1,4 @@
 @import "../../styles/colors";
-@import "../../styles/typography";
 @import "../../styles/variables";
 @import "../../styles/mixins";
 @import "../../styles//utility";
@@ -264,6 +263,8 @@
   width: 100%;
   border: none;
   border-bottom: solid thin black;
+  border-radius: 0;
+
   font-family: "Spartan", sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -277,8 +278,4 @@
 
 input#message {
   height: 100px;
-}
-
-input#message::placeholder {
-  position: absolute;
 }
