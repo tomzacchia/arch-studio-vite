@@ -4,6 +4,8 @@
 @import "../../styles/mixins";
 @import "../../styles//utility";
 
+// UTILITY CLASSES ========================================
+
 .before-decorator {
   content: "";
   width: 65px;
@@ -13,6 +15,17 @@
   left: 0;
   background-color: $light-grey;
 }
+
+.picture-full-width-centered {
+  display: flex;
+}
+
+.picture-full-width-centered img {
+  width: 100%;
+  object-fit: cover;
+}
+
+// CONTACT INTRO ========================================
 
 .contact-intro {
   position: relative;
@@ -25,7 +38,6 @@
 }
 
 .contact-intro picture {
-  display: flex;
   width: 100%;
   height: 240px;
 
@@ -37,11 +49,6 @@
     position: absolute;
     width: 50%;
   }
-}
-
-.contact-intro img {
-  width: 100%;
-  object-fit: cover;
 }
 
 .contact-intro .contact-intro-content::before {
@@ -203,5 +210,14 @@
 
   @include desktop {
     margin-top: 25px;
+  }
+}
+
+// CONTACT MAP ====================================
+.contact-map picture {
+  height: 370px;
+
+  @include tablet {
+    height: 560px;
   }
 }
