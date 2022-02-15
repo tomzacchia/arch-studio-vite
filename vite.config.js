@@ -63,7 +63,7 @@ const headMarkup = `
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon-32x32.png"
+      href="${getEnvBaseRoute()}/assets/favicon-32x32.png"
     />
 
     <title>Arch Studio</title>
