@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "APP_ENV=development vite --open",
-    "build": "vite build",
+    "build": "APP_ENV=production vite build",
+    "build:local": "vite build",
     "preview": "vite preview --open --host"
   },
   "devDependencies": {

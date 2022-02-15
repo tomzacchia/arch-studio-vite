@@ -24,8 +24,10 @@ module.exports = defineConfig({
 function getEnvBaseRoute() {
   if (mode === "development") {
     return "http://localhost:3000";
-  } else {
+  } else if (mode === "production") {
     return `https://${VERCEL_URL}`;
+  } else {
+    return `http://10.0.0.8:4173`;
   }
 }
 
