@@ -1,6 +1,6 @@
-@import "mixins";
-@import "colors";
-@import "variables";
+@import "./styles/mixins";
+@import "./styles/colors";
+@import "./styles/variables";
 
 .primary-hero {
   margin-top: $navbar-height;
