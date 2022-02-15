@@ -1,3 +1,55 @@
-body {
-  background-color: gainsboro;
+@import "../../styles/colors";
+@import "../../styles/typography";
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles//utility";
+
+.contact-intro {
+  position: relative;
+  margin-top: $navbar-height;
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+.contact-intro .hero-dark-overlay {
+  height: 240px;
+}
+
+.contact-intro picture {
+  display: flex;
+  width: 100%;
+  height: 240px;
+}
+
+.contact-intro img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact-intro .contact-intro-content::before {
+  content: "";
+  width: 90%;
+  height: 51px;
+  position: absolute;
+  z-index: 10;
+  top: 190px;
+  left: 0;
+  background-color: white;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.contact-intro .contact-intro-content {
+  padding-top: 35px;
+}
+
+.contact-intro-content h2 {
+  margin-bottom: 15px;
+}
+
+.contact-intro p {
+  color: $dark-grey;
 }
