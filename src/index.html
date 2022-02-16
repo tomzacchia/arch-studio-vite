@@ -3,33 +3,39 @@
   <p class="breadcrumb-text"> HOME </p>
 </section>
 
-<div class="container-no-padding-sm">
-  <section class="primary-hero">
-    <div class="hero-dark-overlay"></div>
-    <div class="hero-content">
-      <h1 class="h1-bold white-text"> Project Paramour</h1>
-      <p class="hero-description">
-        Project made for an art museum near Southwest London. Project Paramour
-        is a statement of bold, modern architecture.
-      </p>
-      <a href="/pages/portfolio/">
-        <button class="button">
-          <p>See Our Portfolio</p>
-          <i class="fas fa-arrow-right"></i>
-        </button>
-      </a>
+<section class="primary-hero container-no-padding-sm">
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <!-- PRIMARY HEROES INSERTED HERE -->
+      </ul>
     </div>
-    <div class="hero-pagination">
-      <!-- TODO: animate gallery -->
-      <button class="square-button square-button-very-dark-blue" data-index="01"
-        >01</button
-      >
-      <button class="square-button" data-index="02">02</button>
-      <button class="square-button" data-index="03">03</button>
-      <button class="square-button" data-index="04">04</button>
+
+    <div class="glide__bullets hero-pagination" data-glide-el="controls[nav]">
+      <button class="glide__bullet square-button" data-glide-dir="=0">
+        01
+      </button>
+      <button class="glide__bullet square-button" data-glide-dir="=1">
+        02
+      </button>
+      <button class="glide__bullet square-button" data-glide-dir="=2">
+        03
+      </button>
+      <button class="glide__bullet square-button" data-glide-dir="=3">
+        04
+      </button>
     </div>
-  </section>
-</div>
+  </div>
+
+  <!-- <div class="hero-pagination">
+    <button class="square-button" data-index="01">
+      01
+    </button>
+    <button class="square-button" data-index="02">02</button>
+    <button class="square-button" data-index="03">03</button>
+    <button class="square-button" data-index="04">04</button>
+  </div> -->
+</section>
 
 <section class="container welcome">
   <h1 class="h1-large welcome-large-text"> Welcome </h1>
