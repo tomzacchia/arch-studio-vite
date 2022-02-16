@@ -2,12 +2,19 @@
 @import "./styles/colors";
 @import "./styles/variables";
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.glide__slide {
+  position: relative;
+}
+
 .primary-hero {
   margin-top: $navbar-height;
   min-height: 600px;
   position: relative;
-  background-image: url("./assets/home/mobile/image-hero-paramour.jpg");
-  background-size: cover;
 }
 
 .primary-hero .hero-content {
@@ -143,7 +150,6 @@
 @include tablet {
   .primary-hero {
     margin-top: 0;
-    background-image: url("./assets/home/tablet/image-hero-paramour.jpg");
   }
 
   .primary-hero .hero-description {
@@ -158,6 +164,7 @@
     justify-content: center;
     position: absolute;
     z-index: 20;
+    top: 0;
   }
 
   .welcome {
@@ -218,10 +225,6 @@
 }
 
 @include desktop {
-  .primary-hero {
-    background-image: url("./assets/home/desktop/image-hero-paramour.jpg");
-  }
-
   .hero-content {
     padding-left: 190px;
   }
@@ -233,7 +236,7 @@
     position: absolute;
     z-index: 100;
     bottom: 0;
-    left: -80px;
+    left: 17px;
   }
 
   .welcome .welcome-large-text {
