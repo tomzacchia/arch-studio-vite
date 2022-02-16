@@ -1,0 +1,8 @@
+.picture-full-width-centered {
+  display: flex;
+}
+
+.picture-full-width-centered img {
+  width: 100%;
+  object-fit: cover;
+}
