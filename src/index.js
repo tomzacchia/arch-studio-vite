@@ -1,4 +1,10 @@
+import Glide from "@glidejs/glide";
 import "/index.scss";
+
+// Initialize after DOM has mounted
+setTimeout(() => {
+  new Glide(".glide").mount();
+}, 1);
 
 const featuredCardContainer = document.querySelector(
   ".featured-cards-container"
